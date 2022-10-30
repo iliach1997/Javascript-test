@@ -4,22 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" 
+     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" 
+     crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="../css/style.css">
     <title>Document</title>
 </head>
 <body>
+  <div>
+  <form  id="form" >
+    <div class="input_Control">
+      <label for="FirstName">First Name</label>
+    <input id="name" name="fname" type="text"   required> 
+    <div class="error"></div>
+    </div>
+    <div class="input_Control">
+      <label for="LastName">Last Name</label>
+    <input id="lastname" name="lname"  type="text"  required>
+    <div class="error"></div>
+    </div>
+    <div class="input_Control">
+      <label for="Address">Address</label>
+    <input id="address" name="address"  type="text" required>
+    <div class="error"></div>
+    </div>
+    <div class="input_Control">
+      <label for="date">Select Date of Birth </label>
+    <input id="date" name="date"  type="date" required>
+    <div class="error"></div>
+    </div>
+    <div class="gender">
+    <input type="radio" name='gender' id="male" value="male">Male
+    <input type="radio" name='gender' id="female" value="female">Female
+    <div class="error" id="error_gender"></div>
+    </div>
+    <input id="btn" type="button"  value="submit" onclick="getdata()">
+    <!-- <button id="submit" class="btn" onclick="Submit()">Submit</button> -->
+  </form>
+ </div>
+
+
+<div id="output">
+<table  border="2" id="table">
+ 
+    <tr>
+      <th>ID</th>
+      <th>Fierst Name </th>
+      <th>Last Name</th>
+      <th>Address</th>
+      <th>Date</th>
+      <th>Gender</th>
+      <th>Action</th>
+    </tr>
+ 
+  <tbody id="tbody">
+   
     
-
-
-
-
-
-
-
-
-
-
-
-
+  </tbody>
+</table>
+</div>
 
 
 
