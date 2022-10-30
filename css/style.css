@@ -79,7 +79,7 @@ label{
 }
 
 
-@media (max-width:5500px){
+@media (max-width:500px){
     #output table{
         width: 400px;
         margin: 10vh auto 0 auto;
