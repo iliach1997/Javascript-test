@@ -2,7 +2,7 @@ body{
     background: linear-gradient(to right,#0f2027,#203a43,#2c5364);
 }
 #form{
-    width: 320px;
+    width: 300px;
     margin: 10vh auto 0 auto;
     padding: 20px;
     background-color: whitesmoke;
@@ -10,17 +10,8 @@ body{
      font-size: 12px;
 }
 
-#output table{
-    width: 700px;
-    margin: 10vh auto 0 auto;
-    padding: 20px;
-    background-color: whitesmoke;
-    border-radius: 4px;
-     font-size: 12px;
-     
 
-}
-#output .btn{
+.btn{
     padding: 10px;
     width: 100%;
     color: white;
@@ -28,11 +19,11 @@ body{
     border: none;
     border-radius: 4px;
 }
-#output td{
-  max-width:100px;
-  height: 100%;
-  font-size: 14px;
+#actbtn{
+display: flex;
+
 }
+
 #btn{
     padding: 10px;
     margin-top: 10px;
@@ -41,6 +32,16 @@ body{
     background-color: rgb(41,47,194);
     border: none;
     border-radius: 4px;
+}
+.btnView{
+  padding: 10px;
+    width: 100%;
+    color: white;
+  
+    border: none;
+    border-radius: 4px;
+  background-color: rgb(41,47,194);
+ 
 }
 label{
     font-size: 17px;
@@ -78,10 +79,165 @@ label{
     height: 13px;
 }
 
+.divbox{
+  width: 200px;
+  height: 200px;
+  margin: 3vh auto 0 auto;
+  padding: 20px;
+ 
+  border-radius: 4px;
+   font-size: 12px;
+}
+.view{
+
+  margin: 5vh auto 0 auto;
+  padding: 20px;
+  background-color: whitesmoke;
+  border-radius: 4px;
+   font-size: 14px;
+  padding-bottom: 5px;
+   
+}
+.close{
+ 
+  display: none;
+}
+#table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    cursor: pointer;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+   
+  }
+  
+  #table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+  }
+  
+  #table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+  }
+  
+  #table th,
+  #table td {
+    padding: .625em;
+    text-align: center;
+  }
+  
+  #table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  
+  @media screen and (max-width: 600px) {
+    #table {
+      border: 0;
+    }
+  
+    #table caption {
+      font-size: 1.3em;
+    }
+    
+    #table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    #table th{
+     display: none;
+    }
+
+    
+    #table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: .8em;
+      text-align: right;
+    }
+    
+    #table td::before {
+      
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    
+    #table td:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+
+  #form{
+    width: 200px;
+    margin: 8vh auto 0 auto;
+    padding:15px;
+    background-color: whitesmoke;
+    border-radius: 4px;
+     font-size: 12px;
+}
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+/* #table{
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+
+tr{
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+}
+#table th,
+#table td {
+  padding: .625em;
+  text-align: center;
+}
 
 @media (max-width:500px){
+  #table th{
+       display: flex;
+       flex-direction: column;
+         
+    
+    }
+    #table td,#table td {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media (max-width:300px){
     #output table{
-        width: 400px;
+        width: 300px;
         margin: 10vh auto 0 auto;
         padding: 20px;
         background-color: whitesmoke;
@@ -90,4 +246,13 @@ label{
          
     
     }
-}
+    #form{
+        width: 200px;
+        margin: 10vh auto 0 auto;
+        padding: 20px;
+        background-color: whitesmoke;
+        border-radius: 4px;
+         font-size: 12px;
+    }
+    
+} */

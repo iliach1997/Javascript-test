@@ -114,15 +114,19 @@ const getdata=()=>{
             let html='';
             let N=1;
             for(let key in arry){
-                  html=html+`<tr>
-                  <td>${N}</td>
-                  <td>${arry[key].fname}</td>
-                  <td>${arry[key].lname}</td>
-                  <td>${arry[key].address}</td>
-                  <td>${arry[key].date}</td>
-                  <td>${arry[key].gender}</td>
+                  html=html+`
+              
+                  <tr>
+                  <td scope="row" data-label="Id:" onclick="ViewData(${key})">${N}</td>
+                  <td data-label="Name:" onclick="ViewData(${key})">${arry[key].fname}</td>
+                  <td data-label="LastName:" onclick="ViewData(${key})">${arry[key].lname}</td>
+                  <td data-label="Addres:" onclick="ViewData(${key})">${arry[key].address}</td>
+                  <td data-label="Date:" onclick="ViewData(${key})">${arry[key].date}</td>
+                  <td data-label="Gender:" onclick="ViewData(${key})">${arry[key].gender}</td>
                 
-                  <td> <button class='btn' onclick="deleteData(${key})">Delete</button></td>
+                  <td> <div id="actbtn"><button class='btn' onclick="deleteData(${key})">Delete</button>
+                  <button class='btnView'  onclick="ViewData(${key})">View</button></div></td>
+
                   </tr>`
                   N++;
                   document.getElementById('tbody').innerHTML=html;
@@ -130,6 +134,32 @@ const getdata=()=>{
             }
 
       }
+}
+
+function ViewData(key){
+      let html='';
+      let arry=getArray()
+     
+     
+      html=html+`
+      <div>Name:${arry[key].fname}</div>
+      <div>LastName:${arry[key].lname}</div>
+      <div>Address: ${arry[key].address}</div>
+      <div>Date: ${arry[key].date}</div>
+      <div>Gender: ${arry[key].gender}</div>
+      <div><button class='btn' id="Closebtn" onclick="Close(${key})">Close</button></div>
+      `
+      document.getElementById('view').innerHTML=html;
+      
+      let view=document.getElementById('view');
+      view.classList.add('view')
+      view.classList.remove('close')
+}
+function Close(){
+let view=document.getElementById('view');
+view.classList.add('close')
+view.classList.remove('view')
+
 }
  function deleteData(key){
        
