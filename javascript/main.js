@@ -104,6 +104,7 @@ const getdata=()=>{
       })
       localStorage.setItem('formdata',JSON.stringify(formdata))
       selectData()
+      location.reload()
 }
 }
 
